@@ -1,18 +1,14 @@
 import FormCard from 'components/FormCard';
-import { Link, useParams } from 'react-router-dom';
-import { Movie } from 'types/movie';
-
-type Props = {
-    movie: Movie;
-}
+import { useParams } from 'react-router-dom';
 
 
-function Form() {
+function Form(): JSX.Element {
 
     const params = useParams();
 
     return (
        <FormCard movieId = {`${params.movieId}`}/>
-    )}
+    );
+}
 
 export default Form;
